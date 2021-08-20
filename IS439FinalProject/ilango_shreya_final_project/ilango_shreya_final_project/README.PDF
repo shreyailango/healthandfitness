@@ -1,0 +1,21 @@
+My application is a website called “Healthier and Happier”. It is an online community of individuals who share their fitness journeys and help new users achieve their fitness goals. This is intended for people who would like to embark on their fitness journey and are seeking inspiration from others. Users have to create an account to be able to access the information shared by the community– the recipes, the workouts and their blog posts. These are also the three models created in this application.
+
+Once a user has created an account, they are able to view the content uploaded by other users and can upload their own content. They can navigate easily between different pages of the website.
+They can also view their uploaded content in their profile page and can update it or delete it if they wish. 
+
+For the workouts, the user has to include the “embed” link from the YouTube video they are sharing. This ensures that the video is displayed on the workout list page. For the recipes, they are asked to upload an image to pique the interest of the other readers. In the recipes list page, they can click on the image to get more information about the recipe. On the posts page, they can click on the title to view the contents of their blog post.
+
+The users have access to all the recipes, the workouts and the recipes. They can click on a single item that will take them to the page with the item’s complete details. 
+
+There is a “tester” superuser who has access to the admin side. The password is “(secret)”. Users “shreya” and “protein_man” are regular members of the community and can view, create, update and delete any content they share. The tester can also do the same, but it is the only user with superuser privileges.
+
+
+Username	    Password	    Superuser
+tester	        (secret)	       Yes
+shreya	        (secret)	       No
+protein_man	    (secret)	       No
+
+
+I have used Django 3.1 and Python 3.8 while building this project and have created a virtual environment called “myvenv” while running my project.
+
+

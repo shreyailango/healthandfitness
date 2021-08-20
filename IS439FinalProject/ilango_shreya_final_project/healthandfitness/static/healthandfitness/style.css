@@ -1,0 +1,48 @@
+.topnav {
+    float: right;
+}
+h4, h1 {
+    font-family: Poor Story;
+    text-align: center;
+    padding-left: 150px;
+    font-color: #ff0000;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.option {
+    max_width: 100%;
+    height: auto;
+    padding: 200px 200px 200px 200px;
+    background-color: #92a8d1;
+    border-color: black;
+    border-style: solid;
+    border-width: 5px
+}
+a {
+    font-family: Poor Story;
+    background-color: #f3d6e4;
+    padding: 14px 25px;
+    font-size: 20px;
+    color: black;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+}
+
+p {
+    font-family: Poor Story;
+    background-color: white;
+    font-size: 50px;
+    color: black;
+    text-align: center;
+}
+
+.center {
+    text-align: center;
+}
+

@@ -1,0 +1,38 @@
+{% load static %}
+{% block content %}
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="{% static 'healthandfitness/form.css' %}">
+         <!--link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pangolin"-->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poor+Story&display=swap" rel="stylesheet">
+    </head>
+    <body>
+    <div class = "container">
+        {% if user.is_authenticated %}
+            <h2> Hi {{ user }}! </h2>
+            <h4> My Blog Posts </h4>
+            {% for post in posts %}
+                <li> <a href = "{% url 'post_detail' pk=post.pk %}"> {{ post.title }} </a> </li>
+            {% endfor %}
+            <h4> My Recipes</h4>
+            {% for recipe in recipes %}
+                <li> <a href = {% url "recipe_detail" pk=recipe.pk %}> {{ recipe.title }} </a> </li>
+            {% endfor %}
+            <h4> My Workouts</h4>
+            {% for workout in workouts %}
+                <li> <a href = {% url "workout_detail" pk=workout.pk %}> {{ workout.title }}</a></li>
+            {% endfor %}
+    {% endif %}
+    <div class = "center">
+        <a href = {% url "homepage" %}>
+           Back to Homepage
+        </a>
+    </div>
+
+    </div>
+    </body>
+
+{% endblock %}

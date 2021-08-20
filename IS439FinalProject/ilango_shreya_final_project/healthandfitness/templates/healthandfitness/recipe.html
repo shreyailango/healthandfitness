@@ -1,0 +1,45 @@
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <link rel="stylesheet" type="text/css" href="{% static 'healthandfitness/recipe.css' %}">
+     <!--link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pangolin"-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poor+Story&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <title>Recipe</title>
+</head>
+<body>
+    <div class = "container">
+        <h1>Recipe Page</h1>
+        <p> We all know that eating clean and healthy is a crucial part of our fitness journey. But how do we keep our meals nutritious, and at the same time, flavorful and interesting? Our community has shared a wide variety of recipes, ranging from not-boring salads to guilt-free desserts.</p>
+        <div class = "center">
+            <a href = {% url "new_recipe" %}>
+               Add a recipe!
+            </a>
+        </div>
+        <br>
+        <div class = "row">
+        {% for recipe in recipes %}
+                <div class = "col-6">
+                    <!--div class = "recipe"-->
+                        <a href = "{% url "recipe_detail" pk=recipe.pk %}" class = "image-style">
+                            <img src = "{{ recipe.photo.url }}" >
+                        </a>
+                        <p class = "center"> {{ recipe.title }}</p>
+                    <!--/div-->
+                </div>
+        {% endfor %}
+        </div>
+        <br>
+        <div class = "center">
+            <a href = {% url "homepage" %}>
+               Back to Homepage
+            </a>
+        </div>
+    </div>
+</body>
+</html>
+{% endblock %}
